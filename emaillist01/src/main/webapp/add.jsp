@@ -4,6 +4,8 @@
 <%@page import="com.poscoict.emaillist.vo.EmaillistVo"%>
 <%@page import="com.poscoict.emaillist.dao.EmaillistDao"%>
 <%
+	request.setCharacterEncoding("utf-8");
+
 	String firstName=request.getParameter("fn");
 	String lastName=request.getParameter("ln");
 	String email=request.getParameter("email");
@@ -13,16 +15,6 @@
 	vo.setLastName(lastName);
 	vo.setEmail(email);
 	
-	boolean result= new EmaillistDao().insert(vo);
-	System.out.println(result ? "success": "fail");
-%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<h1>잘 들어갔습니다</h1>
-</body>
-</html>
+	new EmaillistDao().insert(vo);
+	response.sendRedirect("/emaillist01"); //html이 중심이 됨
+	%>
