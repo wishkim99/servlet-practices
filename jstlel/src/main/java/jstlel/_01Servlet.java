@@ -16,6 +16,7 @@ public class _01Servlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//값
+	
 		int iVal=10;
 		long lVal=10;
 		float fVal=3.14f; //f안붙이면 double로 인식하여 값이 깨질 위험이 있음

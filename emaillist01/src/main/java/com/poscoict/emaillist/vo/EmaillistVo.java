@@ -1,10 +1,12 @@
 package com.poscoict.emaillist.vo;
 
 public class EmaillistVo {
+	
 	private Long no;
 	private String firstName;
 	private String lastName;
 	private String email;
+	
 	public Long getNo() {
 		return no;
 	}
