@@ -9,8 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:set var="row" value="${param.r }" />
-	<c:set var="col" value="${param.c }" />
+	<c:set var="row" value="${param.r}" />
+	<c:set var="col" value="${param.c}" />
 	
 	<c:if test="${empty row }">
 		<c:set var="row" value="3" />
@@ -25,7 +25,7 @@
 		<c:forEach  begin="0" end="${row-1 }" step="1" var="r">
 			<tr>
 				<c:forEach  begin="0" end="${col-1 }" step="1" var="c">
-					<td>cell(${r }, ${c })</td>
+					<td>cell(${r}, ${c})</td>
 				</c:forEach>	
 			</tr>
 		</c:forEach>	
